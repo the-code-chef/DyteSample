@@ -1,0 +1,16 @@
+PODS:
+  - DyteSdk (1.3)
+
+DEPENDENCIES:
+  - DyteSdk
+
+SPEC REPOS:
+  trunk:
+    - DyteSdk
+
+SPEC CHECKSUMS:
+  DyteSdk: d61b787f25c565577c3a81a5542c7eebd6a48ea6
+
+PODFILE CHECKSUM: a0b3a8b12e65ab8a8dee932935131dc238954019
+
+COCOAPODS: 1.10.1

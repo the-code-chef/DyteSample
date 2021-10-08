@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rDW-95-pHa">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CreateMeetingViewController-->
+        <scene sceneID="ktJ-yc-3e0">
+            <objects>
+                <viewController title="CreateMeetingViewController" id="P7X-XW-U8e" customClass="CreateMeetingViewController" customModule="dyte_swift_example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PzO-8v-30R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UjF-wN-gSt">
+                                <rect key="frame" x="82" y="162" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9mr-WJ-Vwe"/>
+                                    <constraint firstAttribute="width" constant="250" id="R6s-Un-CKV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Meeting Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uzk-k5-lF7">
+                                <rect key="frame" x="82" y="254" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="3xe-34-hnb"/>
+                                    <constraint firstAttribute="height" constant="50" id="Es3-Ja-kTI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lzk-b8-VyT">
+                                <rect key="frame" x="82" y="354" width="250" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="P3e-WG-W7n"/>
+                                    <constraint firstAttribute="width" constant="250" id="vZU-qP-kHp"/>
+                                </constraints>
+                                <state key="normal" title="Start Meeting">
+                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="startMeeting:" destination="P7X-XW-U8e" eventType="touchUpInside" id="46X-r9-rLo"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXJ-b8-ziw">
+                                <rect key="frame" x="186" y="77" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aaH-ik-dT8"/>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                        <constraints>
+                            <constraint firstItem="xXJ-b8-ziw" firstAttribute="top" secondItem="aaH-ik-dT8" secondAttribute="top" constant="33" id="Iba-9i-tUi"/>
+                            <constraint firstItem="UjF-wN-gSt" firstAttribute="top" secondItem="aaH-ik-dT8" secondAttribute="top" constant="118" id="JNH-bj-4Z7"/>
+                            <constraint firstItem="uzk-k5-lF7" firstAttribute="centerX" secondItem="PzO-8v-30R" secondAttribute="centerX" id="QC7-oH-WXS"/>
+                            <constraint firstItem="xXJ-b8-ziw" firstAttribute="centerX" secondItem="PzO-8v-30R" secondAttribute="centerX" id="TH7-Kc-icx"/>
+                            <constraint firstItem="Lzk-b8-VyT" firstAttribute="top" secondItem="uzk-k5-lF7" secondAttribute="bottom" constant="50" id="bBe-dJ-REv"/>
+                            <constraint firstItem="UjF-wN-gSt" firstAttribute="centerX" secondItem="PzO-8v-30R" secondAttribute="centerX" id="oq7-qe-uxq"/>
+                            <constraint firstItem="uzk-k5-lF7" firstAttribute="top" secondItem="UjF-wN-gSt" secondAttribute="bottom" constant="42" id="pno-bW-ern"/>
+                            <constraint firstItem="Lzk-b8-VyT" firstAttribute="leading" secondItem="uzk-k5-lF7" secondAttribute="leading" id="qRk-Vi-eA2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Create Meeting" id="pA8-MS-m1S"/>
+                    <connections>
+                        <outlet property="errorMessage" destination="xXJ-b8-ziw" id="d5M-Aa-cFP"/>
+                        <outlet property="hostName" destination="UjF-wN-gSt" id="qTe-eo-34n"/>
+                        <outlet property="meetingName" destination="uzk-k5-lF7" id="whd-f2-xmk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U7D-DW-GRA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-581.15942028985512" y="-603.34821428571422"/>
+        </scene>
+        <!--Join Meeting-->
+        <scene sceneID="wY3-dD-Xu6">
+            <objects>
+                <viewController id="VIr-iK-oab" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HI1-C3-Ho9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pFe-mY-fJC"/>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Join Meeting" id="ngm-Ph-iEV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yYf-2c-Dii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-581" y="108"/>
+        </scene>
+        <!--Meeting-->
+        <scene sceneID="98G-6T-w0H">
+            <objects>
+                <tabBarController title="Meeting" id="rDW-95-pHa" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g6M-rO-eDY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="P7X-XW-U8e" kind="relationship" relationship="viewControllers" id="QP6-6E-n9D"/>
+                        <segue destination="VIr-iK-oab" kind="relationship" relationship="viewControllers" id="KfO-Uh-nsX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0hy-GS-VMW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1812" y="-296"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

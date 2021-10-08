@@ -1,0 +1,22 @@
+PODS:
+  - DyteSdk (1.0)
+
+DEPENDENCIES:
+  - DyteSdk (from `https://github.com/dyte-in/dyte-ios-sdk`, branch `test/v1.8`)
+
+EXTERNAL SOURCES:
+  DyteSdk:
+    :branch: test/v1.8
+    :git: https://github.com/dyte-in/dyte-ios-sdk
+
+CHECKOUT OPTIONS:
+  DyteSdk:
+    :commit: 1a112ab157a5ed69546e19840f5d31513ed3034f
+    :git: https://github.com/dyte-in/dyte-ios-sdk
+
+SPEC CHECKSUMS:
+  DyteSdk: 6a9eb1267eb47af42b38d2889d0475428cd00057
+
+PODFILE CHECKSUM: 0aa1054538a50a7eaf145d5ee4b6a64d17c29838
+
+COCOAPODS: 1.10.1
