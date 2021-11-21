@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.dytekotlinsample.HomeFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/home_fragment">
+
+        <action
+            android:id="@+id/action_Home_to_CreateMeeting"
+            app:destination="@id/CreateMeetingFragment" />
+        <action
+            android:id="@+id/action_Home_to_JoinMeeting"
+            app:destination="@id/JoinMeetingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CreateMeetingFragment"
+        android:name="com.example.dytekotlinsample.CreateMeetingFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/create_meeting_fragment">
+
+        <action
+            android:id="@+id/action_CreateMeeting_to_Home"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/JoinMeetingFragment"
+        android:name="com.example.dytekotlinsample.JoinMeetingFragment"
+        android:label="Join Meeting"
+        tools:layout="@layout/join_meeting_fragment">
+
+        <action
+            android:id="@+id/action_JoinMeeting_to_Home"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+</navigation>
