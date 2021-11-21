@@ -1,5 +1,6 @@
 package com.example.dytekotlinsample
 
+import com.google.gson.annotations.SerializedName
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
@@ -10,11 +11,15 @@ data class Meeting(
     val title: String,
     val roomName: String,
     val status: String,
-    val createdAt: String
+    val createdAt: String,
+    val channelId: String,
+    val startTime: String,
+    val endTime: String
 )
 
 data class MeetingResponse(
     val success: Boolean,
+    @SerializedName("result")
     val meeting: Meeting
 );
 
@@ -56,7 +61,8 @@ public class DyteAPI {
     private val service: DyteAPIService
 
     companion object {
-        const val BASE_URL = "https://app.dyte.in/"
+                const val BASE_URL = "https://app.dyte.in/"
+//        const val BASE_URL = "http://3.139.194.131:4000/"
     }
 
     init {
